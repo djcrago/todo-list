@@ -2,6 +2,7 @@ import './style.css';
 import makeTodoItem from './makeTodoItem';
 import displayTodoItem from './displayTodoItem';
 import makeProject from './makeProject';
+import addTodoItemToProject from './addTodoItemToProject';
 
 // To do list
 
@@ -12,7 +13,7 @@ const defaultProject = makeProject('Default');
 const test = makeTodoItem('Test', 'This is a test', 'Tomorrow', 'High', '2', 
                           false);
 
-defaultProject.todoItems.push(test);
+addTodoItemToProject(test, defaultProject);
 
 defaultProject.todoItems.forEach(displayTodoItem);
 
