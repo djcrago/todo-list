@@ -3,6 +3,7 @@ import makeTodoItem from './makeTodoItem';
 import displayTodoItem from './displayTodoItem';
 import makeProject from './makeProject';
 import addTodoItemToProject from './addTodoItemToProject';
+import displayProject from './displayProject';
 
 // To do list
 
@@ -13,9 +14,14 @@ const defaultProject = makeProject('Default');
 const test = makeTodoItem('Test', 'This is a test', 'Tomorrow', 'High', '2', 
                           false);
 
-addTodoItemToProject(test, defaultProject);
+const test2 = makeTodoItem('Test 2', 'This is a second test', 
+                          'Tomorrow of Yesterday', 'Very High', '10', false);                          
 
-defaultProject.todoItems.forEach(displayTodoItem);
+addTodoItemToProject(test, defaultProject);
+addTodoItemToProject(test2, defaultProject);
+
+
+displayProject(defaultProject, displayTodoItem);
 
 // Todo-item properties
     // title
