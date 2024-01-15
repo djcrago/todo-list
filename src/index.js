@@ -1,13 +1,20 @@
 import './style.css';
 import makeTodoItem from './makeTodoItem';
 import displayTodoItem from './displayTodoItem';
+import makeProject from './makeProject';
 
 // To do list
+
+const defaultProject = makeProject('Default');
+
+
 
 const test = makeTodoItem('Test', 'This is a test', 'Tomorrow', 'High', '2', 
                           false);
 
-displayTodoItem(test);
+defaultProject.todoItems.push(test);
+
+defaultProject.todoItems.forEach(displayTodoItem);
 
 // Todo-item properties
     // title
