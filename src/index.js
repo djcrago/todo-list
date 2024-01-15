@@ -1,9 +1,13 @@
 import './style.css';
 import makeTodoItem from './makeTodoItem';
+import displayTodoItem from './displayTodoItem';
 
 // To do list
 
-console.log(makeTodoItem('Test', 'This is a test'))
+const test = makeTodoItem('Test', 'This is a test', 'Tomorrow', 'High', '2', 
+                          false);
+
+displayTodoItem(test);
 
 // Todo-item properties
     // title

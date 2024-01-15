@@ -1,6 +1,6 @@
 export default function makeTodoItem(title, description, dueDate, priority, 
     timeEstimate, markCompleted) {
-    let todoItem = {
+    return {
         title,
         description,
         dueDate,
@@ -8,6 +8,4 @@ export default function makeTodoItem(title, description, dueDate, priority,
         timeEstimate,
         markCompleted
     };
-
-    return todoItem;
 }
