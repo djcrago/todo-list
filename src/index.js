@@ -14,22 +14,13 @@ const defaultProject = projectController('Default');
 
 addEventListeners();
 
+makeDomTemplate();
+
+domController();
+
 export { listOfProjects, defaultProject };
 
 // testing
-
-makeDomTemplate();
-domController();
-
-todoItemController();
-domController();
-
-const test = projectController();
-todoItemController(test);
-domController();
-
-todoItemController();
-domController();
 
 // testing
 

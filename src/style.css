@@ -24,7 +24,6 @@ h1 {
     border: 1px solid #000;
     width: 200px;
     padding: 16px;
-    margin: 16px;
 }
 
 .title {
@@ -52,7 +51,14 @@ h1 {
 }
 
 .dom-project {
-
+    border: 1px solid black;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: min-content;
+    height: max-content;
 }
 
 .project-title {
@@ -68,4 +74,16 @@ h1 {
     height: 50px;
     align-self: center;
     font-size: 1rem;
+}
+
+.add-todo-item {
+    width: 125px;
+    height: 25px;
+    align-self: center;
+    font-size: 0.9rem;
+}
+
+.projects-container {
+    display: flex;
+    gap: 24px;
 }

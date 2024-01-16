@@ -16,7 +16,7 @@ export default function makeDomTemplate() {
     body.appendChild(title);
  
     addProject.classList.toggle('add-project');
-    addProject.textContent = 'Add New Project';
+    addProject.textContent = 'New Project';
     body.appendChild(addProject);
 
     displayProjectsContainer();
