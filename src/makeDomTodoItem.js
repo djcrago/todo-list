@@ -3,7 +3,7 @@ export default function makeDomTodoItem(todoItem) {
     const domTodoItem = document.createElement('div');
     domTodoItem.classList.toggle('todo-item');
 
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.classList.toggle('title');
     title.textContent = todoItem.title;
     domTodoItem.appendChild(title);
@@ -32,5 +32,7 @@ export default function makeDomTodoItem(todoItem) {
     markCompleted.classList.toggle('mark-completed');
     markCompleted.textContent = 'X'
     domTodoItem.appendChild(markCompleted);
+
+    return domTodoItem;
 
 }

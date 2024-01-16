@@ -8,6 +8,9 @@ import displayListOfProjects from './displayListOfProjects';
 import projectController from './projectController';
 import todoItemController from './todoItemController';
 import makeDomTemplate from './makeDomTemplate';
+import makeDomProject from './makeDomProject';
+import makeDomTodoItem from './makeDomTodoItem';
+import displayDomTodoItem from './displayDomTodoItem';
 
 
 // To do list
@@ -21,6 +24,10 @@ export { listOfProjects, defaultProject };
 // testing
 
 makeDomTemplate();
+const defaultDomProject = makeDomProject(defaultProject);
+const test = makeTodoItem();
+const domTest = makeDomTodoItem(test);
+displayDomTodoItem(domTest);
 
 // testing
 
