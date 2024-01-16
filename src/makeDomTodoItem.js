@@ -1,3 +1,5 @@
+import deleteTodoItem from './deleteTodoItem';
+
 export default function makeDomTodoItem(todoItem) {
 
     const domTodoItem = document.createElement('div');
@@ -30,8 +32,17 @@ export default function makeDomTodoItem(todoItem) {
 
     const markCompleted = document.createElement('button');
     markCompleted.classList.toggle('mark-completed');
-    markCompleted.textContent = 'X'
+    markCompleted.textContent = 'X';
     domTodoItem.appendChild(markCompleted);
+
+    const deleteTodoItemButton = document.createElement('button');
+    deleteTodoItemButton.classList.toggle('delete-todo');
+    deleteTodoItemButton.textContent = 'Delete Todo Item';
+    deleteTodoItemButton.addEventListener('click', () => {
+        let item = todoItem;
+        deleteTodoItem(item);
+    });
+    domTodoItem.appendChild(deleteTodoItemButton);
 
     return domTodoItem;
 

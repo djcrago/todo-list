@@ -1,7 +1,9 @@
-export default function domTodoItemController(todoItem) {
+import todoItemController from "./todoItemController";
+import domController from "./domController";
 
-    const domTest = makeDomTodoItem(test);
-    addDomTodoItemToDomProject(domTest, defaultDomProject);
-    updateDomDisplay();
+export default function domTodoItemController(project) {
+
+    todoItemController(project);
+    domController();
 
 }

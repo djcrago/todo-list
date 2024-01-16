@@ -2,8 +2,11 @@ import { body, projectsContainer } from './makeDomTemplate';
 
 export default function clearDomDisplay() {
 
-    projectsContainer.innerHTML = '';
+    if (projectsContainer.innerHTML !== '') {
+        
+        projectsContainer.innerHTML = '';
+        body.removeChild(projectsContainer); 
 
-    body.removeChild(projectsContainer);
+    };
 
 }

@@ -1,4 +1,5 @@
-export default function makeTodoItem() {
+export default function makeTodoItem(project) {
+
     const title = prompt('Title: ', 'Test');
     const description = prompt('Description: ', 'This is a test.');
     const dueDate = prompt('Due Date: ', 'Tomorrow');
@@ -11,6 +12,8 @@ export default function makeTodoItem() {
         dueDate,
         priority,
         timeEstimate,
-        markCompleted: false
+        markCompleted: false,
+        project
     };
+
 }

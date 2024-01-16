@@ -1,16 +1,4 @@
-import domController from "./domController";
-import todoItemController from "./todoItemController";
-import deleteProject from './deleteProject';
-
-export default function makeDomProject(project) {
-
-    const domProject = document.createElement('div');
-    domProject.classList.toggle('dom-project');
-
-    const title = document.createElement('h2');
-    title.classList.toggle('project-title');
-    title.textContent = project.title;
-    domProject.appendChild(title);
+export default function addDomProjectButtons(domProject) {
 
     const addTodoItem = document.createElement('button');
     addTodoItem.classList.toggle('add-todo-item');
@@ -25,13 +13,12 @@ export default function makeDomProject(project) {
     deleteProjectButton.classList.toggle('delete-project');
     deleteProjectButton.textContent = 'Delete Project';
     deleteProjectButton.addEventListener('click', () => {
-        deleteProject(project);
+        deleteProject();
         domController();
     });
     if (project.title !== 'Default') {
-        domProject.appendChild(deleteProjectButton);
+        domProject.appendChild(deleteProjectButton);        
     }
-
 
     return domProject;
 
