@@ -2,7 +2,6 @@ import './style.css';
 import projectController from './projectController';
 import makeDomTemplate from './makeDomTemplate';
 import domController from './domController';
-import todoItemController from './todoItemController';
 
 
 // To do list

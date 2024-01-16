@@ -23,7 +23,7 @@ h1 {
     align-self: center;
     gap: 8px;
     border: 1px solid orange;
-    width: 200px;
+    width: 300px;
     padding: 16px;
 }
 
@@ -48,7 +48,17 @@ h1 {
 }
 
 .mark-completed {
+    width: 108px;
+    align-self: center;
+}
 
+.title,
+.description,
+.due-date,
+.priority,
+.time-estimate {
+    display: flex;
+    justify-content: space-between;
 }
 
 .dom-project {
@@ -58,9 +68,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    min-width: min-content;
+    min-width: 332px;
     max-width: 25vw;
     height: max-content;
+    min-height: 200px;
 }
 
 .project-title {
@@ -98,5 +109,12 @@ h1 {
 }
 
 .delete-todo {
+    width: max-content;
+    align-self: center;
+    padding: 2px;
+}
 
+.edit-property {
+    height: min-content;
+    padding: 2px;
 }
