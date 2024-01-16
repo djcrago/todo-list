@@ -1,4 +1,3 @@
-import displayDomTodoItem from "./displayDomTodoItem";
 import { projectsContainer } from './makeDomTemplate';
 
 export default function displayDomProject(domProject) {
