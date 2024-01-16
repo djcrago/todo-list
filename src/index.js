@@ -1,30 +1,39 @@
 import './style.css';
-import makeTodoItem from './makeTodoItem';
-import displayTodoItem from './displayTodoItem';
 import makeProject from './makeProject';
+import addProjectToListOfProjects from './addProjectToListOfProjects';
+import makeTodoItem from './makeTodoItem';
 import addTodoItemToProject from './addTodoItemToProject';
-import displayProject from './displayProject';
+import clearDisplay from './clearDisplay';
 import displayListOfProjects from './displayListOfProjects';
-import addProjectToProjects from './addProjectToProjects';
+import projectController from './projectController';
+
 
 // To do list
 
 const listOfProjects = [];
 
+export default listOfProjects;
+
 const defaultProject = makeProject('Default');
 
-addProjectToProjects(defaultProject);
+addProjectToListOfProjects(defaultProject);
+
+export { defaultProject };
+
+// testing
 
 const test = makeTodoItem();
 
-addTodoItemToProject(test, defaultProject);
+addTodoItemToProject(test);
 
-console.log(defaultProject);
+projectController('Hello');
+
+
+// testing
+
+clearDisplay();
 
 displayListOfProjects();
-
-
-
 
 
 
@@ -45,5 +54,3 @@ displayListOfProjects();
     // date-fns
 
 // localStorage
-
-export { listOfProjects };

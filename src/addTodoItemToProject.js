@@ -1,3 +1,6 @@
+import { defaultProject } from "./index";
+
 export default function addTodoItemToProject(todoItem, project) {
-    project.todoItems.push(todoItem);
+    const projectToUpdate = project ? project : defaultProject;
+    projectToUpdate.todoItems.push(todoItem);
 }
