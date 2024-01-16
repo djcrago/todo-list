@@ -7,6 +7,7 @@ import clearDisplay from './clearDisplay';
 import displayListOfProjects from './displayListOfProjects';
 import projectController from './projectController';
 import todoItemController from './todoItemController';
+import makeDomTemplate from './makeDomTemplate';
 
 
 // To do list
@@ -19,21 +20,9 @@ export { listOfProjects, defaultProject };
 
 // testing
 
-const hello = projectController('Hello');
-
-todoItemController();
-
-todoItemController(hello);
-
+makeDomTemplate();
 
 // testing
-
-
-
-// Projects (seperate lists of todos)
-    // When user first opens app have 'default' project
-    // Create new projects
-    // Choose which project a new todo goes into
 
 // Seperate application logic from DOM-related stuff
     // Start in console
