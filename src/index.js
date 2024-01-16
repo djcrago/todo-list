@@ -1,8 +1,9 @@
 import './style.css';
 import projectController from './projectController';
 import makeDomTemplate from './makeDomTemplate';
-import domProjectController from './domProjectController';
+import domController from './domController';
 import todoItemController from './todoItemController';
+import addEventListeners from './addEventListeners';
 
 
 // To do list
@@ -11,17 +12,24 @@ const listOfProjects = [];
 
 const defaultProject = projectController('Default');
 
+addEventListeners();
+
 export { listOfProjects, defaultProject };
 
 // testing
 
 makeDomTemplate();
-domProjectController();
+domController();
 
 todoItemController();
+domController();
+
+const test = projectController();
+todoItemController(test);
+domController();
+
 todoItemController();
-domProjectController();
-// updateDomDisplay();
+domController();
 
 // testing
 

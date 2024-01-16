@@ -6,7 +6,7 @@ import { listOfProjects } from "./index";
 import makeDomProject from "./makeDomProject";
 import makeDomTodoItem from "./makeDomTodoItem";
 
-export default function domProjectController() {
+export default function domController() {
 
     clearDomDisplay();
 
