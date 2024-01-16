@@ -1,12 +1,6 @@
 import './style.css';
-import makeTodoItem from './makeTodoItem';
 import projectController from './projectController';
 import makeDomTemplate from './makeDomTemplate';
-import makeDomProject from './makeDomProject';
-import makeDomTodoItem from './makeDomTodoItem';
-import addDomProjectToProjectsContainer from './addDomProjectToProjectsContainer';
-import updateDomDisplay from './updateDomDisplay';
-import addDomTodoItemToDomProject from './addDomTodoItemToDomProject';
 import domProjectController from './domProjectController';
 import todoItemController from './todoItemController';
 

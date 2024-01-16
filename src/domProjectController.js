@@ -1,11 +1,14 @@
 import addDomProjectToProjectsContainer from "./addDomProjectToProjectsContainer";
 import addDomTodoItemToDomProject from "./addDomTodoItemToDomProject";
+import clearDomDisplay from "./clearDomDisplay";
+import displayProjectsContainer from "./displayProjectsContainer";
 import { listOfProjects } from "./index";
 import makeDomProject from "./makeDomProject";
 import makeDomTodoItem from "./makeDomTodoItem";
-import updateDomDisplay from "./updateDomDisplay";
 
 export default function domProjectController() {
+
+    clearDomDisplay();
 
     listOfProjects.forEach((project) => {
 
@@ -22,6 +25,6 @@ export default function domProjectController() {
 
     });
 
-    updateDomDisplay();
+    displayProjectsContainer();
 
 }
