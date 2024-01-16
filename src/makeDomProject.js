@@ -8,10 +8,6 @@ export default function makeDomProject(project) {
     title.textContent = project.title;
     domProject.appendChild(title);
 
-    const todoItems = document.createElement('div');
-    todoItems.classList.toggle('todo-items');
-    domProject.appendChild(todoItems);
-
     return domProject;
 
 }

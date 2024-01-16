@@ -17,6 +17,11 @@ h1 {
 .todo-item {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    border: 1px solid #000;
+    width: 200px;
+    padding: 16px;
+    margin: 16px;
 }
 
 .title {
@@ -52,5 +57,5 @@ h1 {
 }
 
 .todo-items {
-    
+
 }

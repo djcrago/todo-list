@@ -11,6 +11,11 @@ import makeDomTemplate from './makeDomTemplate';
 import makeDomProject from './makeDomProject';
 import makeDomTodoItem from './makeDomTodoItem';
 import displayDomTodoItem from './displayDomTodoItem';
+import displayDomProject from './displayDomProject';
+import addDomProjectToProjectsContainer from './addDomProjectToProjectsContainer';
+import updateDomDisplay from './updateDomDisplay';
+import addDomTodoItemToDomProject from './addDomTodoItemToDomProject';
+import updateDisplay from './updateDisplay';
 
 
 // To do list
@@ -25,9 +30,18 @@ export { listOfProjects, defaultProject };
 
 makeDomTemplate();
 const defaultDomProject = makeDomProject(defaultProject);
+addDomProjectToProjectsContainer(defaultDomProject);
+updateDomDisplay();
+
 const test = makeTodoItem();
 const domTest = makeDomTodoItem(test);
-displayDomTodoItem(domTest);
+addDomTodoItemToDomProject(domTest, defaultDomProject);
+updateDomDisplay();
+
+const test2 = makeTodoItem();
+const domTest2 = makeDomTodoItem(test2);
+addDomTodoItemToDomProject(domTest2, defaultDomProject);
+updateDisplay();
 
 // testing
 
