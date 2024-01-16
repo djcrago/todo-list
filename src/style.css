@@ -20,6 +20,7 @@ h1 {
 .todo-item {
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 8px;
     border: 1px solid #000;
     width: 200px;
@@ -57,12 +58,15 @@ h1 {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
-    width: min-content;
+    min-width: min-content;
+    max-width: 25vw;
     height: max-content;
 }
 
 .project-title {
-
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .todo-items {
@@ -85,5 +89,11 @@ h1 {
 
 .projects-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
+}
+
+.delete-project {
+    
 }

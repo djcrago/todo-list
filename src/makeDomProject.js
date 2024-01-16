@@ -1,5 +1,6 @@
 import todoItemController from "./todoItemController";
 import domController from "./domController";
+import deleteProject from "./deleteProject";
 
 export default function makeDomProject(project) {
 
@@ -19,6 +20,19 @@ export default function makeDomProject(project) {
         domController();
     });
     domProject.appendChild(addTodoItem);
+
+    const deleteProjectButton = document.createElement('button');
+    deleteProjectButton.classList.toggle('delete-project');
+    deleteProjectButton.textContent = 'Delete Project';
+    console.log(project);
+    deleteProjectButton.addEventListener('click', () => {
+        deleteProject();
+        domController();
+    });
+    if (project.title !== 'Default') {
+        domProject.appendChild(deleteProjectButton);        
+    }
+
 
     return domProject;
 

@@ -1,10 +1,10 @@
 import displayProjectsContainer from "./displayProjectsContainer";
+import projectController from "./projectController";
+import domController from "./domController";
 
 const body = document.querySelector('body');
 
 const projectsContainer = document.createElement('div');
-
-const addProject = document.createElement('button');
 
 
 export default function makeDomTemplate() {
@@ -15,12 +15,18 @@ export default function makeDomTemplate() {
     title.textContent = 'Todo List';
     body.appendChild(title);
  
+
+    const addProject = document.createElement('button');
     addProject.classList.toggle('add-project');
     addProject.textContent = 'New Project';
+    addProject.addEventListener('click', () => {
+        projectController();
+        domController(); 
+    });
     body.appendChild(addProject);
 
     displayProjectsContainer();
 
 }
 
-export { body, projectsContainer, addProject };
+export { body, projectsContainer };
