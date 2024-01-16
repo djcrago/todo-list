@@ -21,6 +21,9 @@ export default function makeDomTodoItem(todoItem) {
     description.classList.toggle('description');
     description.textContent = todoItem.description;
     const editDescription = makeDomEditButton();
+    editDescription.addEventListener('click', () => {
+        editProperty(todoItem, 'description');
+    });
     description.appendChild(editDescription);
     domTodoItem.appendChild(description);
 
@@ -28,6 +31,9 @@ export default function makeDomTodoItem(todoItem) {
     dueDate.classList.toggle('due-date');
     dueDate.textContent = `Due: ${todoItem.dueDate}`;
     const editDueDate = makeDomEditButton();
+    editDueDate.addEventListener('click', () => {
+        editProperty(todoItem, 'dueDate');
+    });
     dueDate.appendChild(editDueDate);
     domTodoItem.appendChild(dueDate);
 
@@ -35,6 +41,9 @@ export default function makeDomTodoItem(todoItem) {
     priority.classList.toggle('priority');
     priority.textContent = `Priority: ${todoItem.priority}`;
     const editPriority = makeDomEditButton();
+    editPriority.addEventListener('click', () => {
+        editProperty(todoItem, 'priority');
+    });
     priority.appendChild(editPriority);
     domTodoItem.appendChild(priority);
 
@@ -42,6 +51,9 @@ export default function makeDomTodoItem(todoItem) {
     timeEstimate.classList.toggle('time-estimate');
     timeEstimate.textContent = `Time Estimate: ${todoItem.timeEstimate} hours`;
     const editTimeEstimate = makeDomEditButton();
+    editTimeEstimate.addEventListener('click', () => {
+        editProperty(todoItem, 'timeEstimate');
+    });
     timeEstimate.appendChild(editTimeEstimate);
     domTodoItem.appendChild(timeEstimate);
 
