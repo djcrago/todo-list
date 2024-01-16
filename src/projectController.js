@@ -1,7 +1,6 @@
 import addProjectToListOfProjects from "./addProjectToListOfProjects";
-import clearDisplay from "./clearDisplay";
-import displayListOfProjects from "./displayListOfProjects";
 import makeProject from "./makeProject";
+import updateDisplay from "./updateDisplay";
 
 export default function projectController(projectTitle) {
 
@@ -9,8 +8,8 @@ export default function projectController(projectTitle) {
 
     addProjectToListOfProjects(project);
 
-    clearDisplay();
+    updateDisplay();
 
-    displayListOfProjects();
+    return project;
 
 }

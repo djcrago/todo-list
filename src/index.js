@@ -6,34 +6,27 @@ import addTodoItemToProject from './addTodoItemToProject';
 import clearDisplay from './clearDisplay';
 import displayListOfProjects from './displayListOfProjects';
 import projectController from './projectController';
+import todoItemController from './todoItemController';
 
 
 // To do list
 
 const listOfProjects = [];
 
-export default listOfProjects;
+const defaultProject = projectController('Default');
 
-const defaultProject = makeProject('Default');
-
-addProjectToListOfProjects(defaultProject);
-
-export { defaultProject };
+export { listOfProjects, defaultProject };
 
 // testing
 
-const test = makeTodoItem();
+const hello = projectController('Hello');
 
-addTodoItemToProject(test);
+todoItemController();
 
-projectController('Hello');
+todoItemController(hello);
 
 
 // testing
-
-clearDisplay();
-
-displayListOfProjects();
 
 
 
