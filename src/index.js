@@ -4,32 +4,29 @@ import displayTodoItem from './displayTodoItem';
 import makeProject from './makeProject';
 import addTodoItemToProject from './addTodoItemToProject';
 import displayProject from './displayProject';
+import displayListOfProjects from './displayListOfProjects';
+import addProjectToProjects from './addProjectToProjects';
 
 // To do list
 
+const listOfProjects = [];
+
 const defaultProject = makeProject('Default');
 
+addProjectToProjects(defaultProject);
 
-
-const test = makeTodoItem('Test', 'This is a test', 'Tomorrow', 'High', '2', 
-                          false);
-
-const test2 = makeTodoItem('Test 2', 'This is a second test', 
-                          'Tomorrow of Yesterday', 'Very High', '10', false);                          
+const test = makeTodoItem();
 
 addTodoItemToProject(test, defaultProject);
-addTodoItemToProject(test2, defaultProject);
+
+console.log(defaultProject);
+
+displayListOfProjects();
 
 
-displayProject(defaultProject, displayTodoItem);
 
-// Todo-item properties
-    // title
-    // description
-    // dueDate
-    // priority
-    // timeEstimate
-    // markCompleted
+
+
 
 // Projects (seperate lists of todos)
     // When user first opens app have 'default' project
@@ -48,3 +45,5 @@ displayProject(defaultProject, displayTodoItem);
     // date-fns
 
 // localStorage
+
+export { listOfProjects };

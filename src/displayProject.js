@@ -1,4 +1,6 @@
-export default function displayProject(project, displayFunction) {
+import displayTodoItem from "./displayTodoItem";
+
+export default function displayProject(project) {
     console.log(`Project: ${project.title}`);
-    project.todoItems.forEach(displayFunction);
+    project.todoItems.forEach(displayTodoItem);
 }
