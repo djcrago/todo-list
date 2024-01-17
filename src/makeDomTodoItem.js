@@ -1,5 +1,5 @@
 import deleteTodoItem from './deleteTodoItem';
-import editProperty from './editProperty';
+import editPropertyController from './editPropertyController';
 import makeDomEditButton from './makeDomEditButton';
 
 export default function makeDomTodoItem(todoItem) {
@@ -12,7 +12,7 @@ export default function makeDomTodoItem(todoItem) {
     title.textContent = todoItem.title;
     const editTitle = makeDomEditButton();
     editTitle.addEventListener('click', () => {
-        editProperty(todoItem, 'title');
+        editPropertyController(todoItem, 'title');
     });
     title.appendChild(editTitle);
     domTodoItem.appendChild(title);
@@ -22,7 +22,7 @@ export default function makeDomTodoItem(todoItem) {
     description.textContent = todoItem.description;
     const editDescription = makeDomEditButton();
     editDescription.addEventListener('click', () => {
-        editProperty(todoItem, 'description');
+        editPropertyController(todoItem, 'description');
     });
     description.appendChild(editDescription);
     domTodoItem.appendChild(description);
@@ -32,7 +32,7 @@ export default function makeDomTodoItem(todoItem) {
     dueDate.textContent = `Due: ${todoItem.dueDate}`;
     const editDueDate = makeDomEditButton();
     editDueDate.addEventListener('click', () => {
-        editProperty(todoItem, 'dueDate');
+        editPropertyController(todoItem, 'dueDate');
     });
     dueDate.appendChild(editDueDate);
     domTodoItem.appendChild(dueDate);
@@ -42,7 +42,7 @@ export default function makeDomTodoItem(todoItem) {
     priority.textContent = `Priority: ${todoItem.priority}`;
     const editPriority = makeDomEditButton();
     editPriority.addEventListener('click', () => {
-        editProperty(todoItem, 'priority');
+        editPropertyController(todoItem, 'priority');
     });
     priority.appendChild(editPriority);
     domTodoItem.appendChild(priority);
@@ -52,7 +52,7 @@ export default function makeDomTodoItem(todoItem) {
     timeEstimate.textContent = `Time Estimate: ${todoItem.timeEstimate} hours`;
     const editTimeEstimate = makeDomEditButton();
     editTimeEstimate.addEventListener('click', () => {
-        editProperty(todoItem, 'timeEstimate');
+        editPropertyController(todoItem, 'timeEstimate');
     });
     timeEstimate.appendChild(editTimeEstimate);
     domTodoItem.appendChild(timeEstimate);

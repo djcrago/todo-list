@@ -23,7 +23,7 @@ h1 {
     align-self: center;
     gap: 8px;
     border: 1px solid orange;
-    width: 300px;
+    min-width: 300px;
     padding: 16px;
 }
 
@@ -58,7 +58,7 @@ h1 {
 .priority,
 .time-estimate {
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
 }
 
 .dom-project {
@@ -69,7 +69,6 @@ h1 {
     align-items: center;
     gap: 16px;
     min-width: 332px;
-    max-width: 25vw;
     height: max-content;
     min-height: 200px;
 }
@@ -117,4 +116,5 @@ h1 {
 .edit-property {
     height: min-content;
     padding: 2px;
+    margin-left: auto;
 }

@@ -1,13 +1,7 @@
 import domController from "./domController";
 
-export default function editProperty(todoItem, property) {
-
-    const newValue = prompt(`New ${property}:`);
+export default function editProperty(todoItem, property, newValue) {
 
     todoItem[property] = newValue;
-
-    console.log('connectedd');
-
-    domController();
 
 }
