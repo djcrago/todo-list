@@ -1,5 +1,4 @@
 import { listOfProjects } from ".";
-import domController from "./domController";
 
 export default function deleteTodoItem(todoItem, project) {
 
@@ -12,8 +11,6 @@ export default function deleteTodoItem(todoItem, project) {
 
             console.log(index);
             listOfProjects[i].todoItems.splice(index, 1);
-
-            domController();
 
         };
 

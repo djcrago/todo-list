@@ -29,18 +29,4 @@ export default function editPropertyController(todoItem, property) {
 
     editProperty(todoItem, property, newValue);
 
-    domController();
-
 }
-
-// import domController from "./domController";
-
-// export default function editProperty(todoItem, property) {
-
-//     const newValue = prompt(`New ${property}:`);
-
-//     todoItem[property] = newValue;
-
-//     domController();
-
-// }
