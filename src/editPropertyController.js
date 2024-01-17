@@ -1,5 +1,5 @@
-import editProperty from "./editProperty";
 import domController from "./domController";
+import editProperty from "./editProperty";
 
 export default function editPropertyController(todoItem, property) {
 
@@ -16,9 +16,9 @@ export default function editPropertyController(todoItem, property) {
 
     };
 
-    if (property === 'time estimate') {
+    if (property === 'timeEstimate') {
 
-        if (Number.isNaN(+newValue)) {
+        while (Number.isNaN(+newValue)) {
 
             alert('Enter number of hours.');
             newValue = prompt(`New ${property}:`);

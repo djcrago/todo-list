@@ -1,23 +1,16 @@
-export default function makeDomEditButton() {
+import domController from "./domController";
+import editPropertyController from "./editPropertyController";
+
+export default function makeDomEditButton(todoItem, property) {
 
     const editButton = document.createElement('button');
     editButton.classList.toggle('edit-property');
     editButton.textContent = 'Edit';
+    editButton.addEventListener('click', () => {
+        editPropertyController(todoItem, property);
+        domController();
+    });
 
     return editButton;
 
 }
-
-// const title = document.createElement('h3');
-// title.classList.toggle('title');
-// title.textContent = todoItem.title;
-
-
-// Add in eventlistent to makeDomEditButton fn?
-
-// const editTitle = makeDomEditButton();
-// editTitle.addEventListener('click', () => {
-//     editPropertyController(todoItem, 'title');
-//     domController();
-// });
-// title.appendChild(editTitle);
