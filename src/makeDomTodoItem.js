@@ -32,7 +32,7 @@ export default function makeDomTodoItem(todoItem) {
     dueDate.textContent = `Due: ${todoItem.dueDate}`;
     const editDueDate = makeDomEditButton();
     editDueDate.addEventListener('click', () => {
-        editPropertyController(todoItem, 'dueDate');
+        editPropertyController(todoItem, 'due date');
     });
     dueDate.appendChild(editDueDate);
     domTodoItem.appendChild(dueDate);
@@ -52,7 +52,7 @@ export default function makeDomTodoItem(todoItem) {
     timeEstimate.textContent = `Time Estimate: ${todoItem.timeEstimate} hours`;
     const editTimeEstimate = makeDomEditButton();
     editTimeEstimate.addEventListener('click', () => {
-        editPropertyController(todoItem, 'timeEstimate');
+        editPropertyController(todoItem, 'time estimate');
     });
     timeEstimate.appendChild(editTimeEstimate);
     domTodoItem.appendChild(timeEstimate);

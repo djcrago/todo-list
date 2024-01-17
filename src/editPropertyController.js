@@ -16,7 +16,7 @@ export default function editPropertyController(todoItem, property) {
 
     };
 
-    if (property === 'timeEstimate') {
+    if (property === 'time estimate') {
 
         if (Number.isNaN(+newValue)) {
 
