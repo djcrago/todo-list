@@ -1,58 +1,40 @@
 import deleteTodoItem from './deleteTodoItem';
-import updateDom from './updateProjectsContainer';
-import makeDomEditButton from './makeDomEditButton';
+import updateProjectsContainer from './updateProjectsContainer';
+import makeDomTodoItemElement from './makeDomTodoItemElement';
 
 export default function makeDomTodoItem(todoItem) {
 
     const domTodoItem = document.createElement('div');
     domTodoItem.classList.toggle('todo-item');
 
-    const title = document.createElement('h3');
-    title.classList.toggle('title');
-    title.textContent = todoItem.title;
-    const editTitle = makeDomEditButton(todoItem, 'title');
-    title.appendChild(editTitle);
+    const title = makeDomTodoItemElement(todoItem, 'title',  'h3');
     domTodoItem.appendChild(title);
 
-    const description = document.createElement('p');
-    description.classList.toggle('description');
-    description.textContent = todoItem.description;
-    const editDescription = makeDomEditButton(todoItem, 'description');
-    description.appendChild(editDescription);
+    const description = makeDomTodoItemElement(todoItem, 'description');
     domTodoItem.appendChild(description);
 
-    const dueDate = document.createElement('p');
-    dueDate.classList.toggle('due-date');
-    dueDate.textContent = `Due: ${todoItem.dueDate}`;
-    const editDueDate = makeDomEditButton(todoItem, 'dueDate');
-    dueDate.appendChild(editDueDate);
+    const dueDate = makeDomTodoItemElement(todoItem, 'dueDate');
     domTodoItem.appendChild(dueDate);
 
-    const priority = document.createElement('p');
-    priority.classList.toggle('priority');
-    priority.textContent = `Priority: ${todoItem.priority}`;
-    const editPriority = makeDomEditButton(todoItem, 'priority');
-    priority.appendChild(editPriority);
+    const priority = makeDomTodoItemElement(todoItem, 'priority');
     domTodoItem.appendChild(priority);
 
-    const timeEstimate = document.createElement('p');
-    timeEstimate.classList.toggle('time-estimate');
-    timeEstimate.textContent = `Time Estimate: ${todoItem.timeEstimate} hours`;
-    const editTimeEstimate = makeDomEditButton(todoItem, 'timeEstimate');
-    timeEstimate.appendChild(editTimeEstimate);
+    const timeEstimate = makeDomTodoItemElement(todoItem, 'timeEstimate');
     domTodoItem.appendChild(timeEstimate);
 
-    const markCompleted = document.createElement('button');
-    markCompleted.classList.toggle('mark-completed');
-    markCompleted.textContent = 'Not Completed';
+    const markCompleted = makeDomTodoItemElement(todoItem, 'markCompleted', 
+                                                'button');
     domTodoItem.appendChild(markCompleted);
 
-    const deleteTodoItemButton = document.createElement('button');
-    deleteTodoItemButton.classList.toggle('delete-todo');
-    deleteTodoItemButton.textContent = 'Delete Todo Item';
+    // const deleteTodoItemButton = document.createElement('button');
+    // deleteTodoItemButton.classList.toggle('delete-todo');
+    // deleteTodoItemButton.textContent = 'Delete Todo Item';
+
+    const deleteTodoItemButton = makeDomTodoItemElement(todoItem, 'delete',
+                                                        'button');
     deleteTodoItemButton.addEventListener('click', () => {
         deleteTodoItem(todoItem);
-        updateDom();
+        updateProjectsContainer();
     });
     domTodoItem.appendChild(deleteTodoItemButton);
 

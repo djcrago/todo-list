@@ -1,7 +1,6 @@
 import editProperty from "./editProperty";
 import getNewValue from "./getNewValue";
 
-
 export default function editPropertyController(todoItem, property) {
 
     let newValue = getNewValue(property);

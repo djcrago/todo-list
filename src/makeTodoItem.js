@@ -16,7 +16,7 @@ export default function makeTodoItem(project) {
         dueDate,
         priority,
         timeEstimate,
-        markCompleted: false,
+        markCompleted: 'Not Complete',
         project
     };
 

@@ -35,7 +35,7 @@ h1 {
 
 }
 
-.due-date {
+.dueDate {
 
 }
 
@@ -43,20 +43,19 @@ h1 {
 
 }
 
-.time-estimate {
+.timeEstimate {
 
 }
 
-.mark-completed {
-    width: 108px;
-    align-self: center;
+.markCompleted {
+
 }
 
 .title,
 .description,
-.due-date,
+.dueDate,
 .priority,
-.time-estimate {
+.timeEstimate {
     display: flex;
     gap: 8px;
 }
@@ -107,12 +106,6 @@ h1 {
     padding: 4px;
 }
 
-.delete-todo {
-    width: max-content;
-    align-self: center;
-    padding: 2px;
-}
-
 .edit-property {
     height: min-content;
     padding: 2px;
@@ -120,5 +113,5 @@ h1 {
 }
 
 .dialog {
-    
+
 }

@@ -1,5 +1,5 @@
 import projectController from "./projectController";
-import updateDom from "./updateProjectsContainer";
+import updateProjectsContainer from "./updateProjectsContainer";
 
 const body = document.querySelector('body');
 
@@ -18,7 +18,7 @@ export default function makeDomTemplate() {
     addProjectButton.textContent = 'New Project';
     addProjectButton.addEventListener('click', () => {
         projectController();
-        updateDom(); 
+        updateProjectsContainer(); 
     });
     body.appendChild(addProjectButton);
 
