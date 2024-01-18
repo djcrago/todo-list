@@ -2,33 +2,37 @@ import deleteTodoItem from './deleteTodoItem';
 import updateProjectsContainer from './updateProjectsContainer';
 import makeDomTodoItemElement from './makeDomTodoItemElement';
 
-export default function makeDomTodoItem(todoItem) {
+export default function makeDomExpandedTodoItem(todoItem) {
 
-    const domTodoItem = document.createElement('div');
-    domTodoItem.classList.toggle('todo-item');
+    const domExpandedTodoItem = document.createElement('div');
+    domExpandedTodoItem.classList.toggle('todo-item');
 
     const title = makeDomTodoItemElement(todoItem, 'title',  'h3');
-    domTodoItem.appendChild(title);
+    domExpandedTodoItem.appendChild(title);
 
     const description = makeDomTodoItemElement(todoItem, 'description');
-    domTodoItem.appendChild(description);
+    domExpandedTodoItem.appendChild(description);
 
     const dueDate = makeDomTodoItemElement(todoItem, 'dueDate');
-    domTodoItem.appendChild(dueDate);
+    domExpandedTodoItem.appendChild(dueDate);
 
     const priority = makeDomTodoItemElement(todoItem, 'priority');
-    domTodoItem.appendChild(priority);
+    domExpandedTodoItem.appendChild(priority);
 
     const timeEstimate = makeDomTodoItemElement(todoItem, 'timeEstimate');
-    domTodoItem.appendChild(timeEstimate);
+    domExpandedTodoItem.appendChild(timeEstimate);
 
     const markCompleted = makeDomTodoItemElement(todoItem, 'markCompleted', 
                                                 'button');
-    domTodoItem.appendChild(markCompleted);
+    domExpandedTodoItem.appendChild(markCompleted);
 
-    // const deleteTodoItemButton = document.createElement('button');
-    // deleteTodoItemButton.classList.toggle('delete-todo');
-    // deleteTodoItemButton.textContent = 'Delete Todo Item';
+    const toggleDetailsButton = makeDomTodoItemElement(todoItem, 'details',
+                                                       'button');
+    toggleDetailsButton.addEventListener('click', () => {
+        todoItem.details = !todoItem.details;
+        updateProjectsContainer();
+    });
+    domExpandedTodoItem.appendChild(toggleDetailsButton);
 
     const deleteTodoItemButton = makeDomTodoItemElement(todoItem, 'delete',
                                                         'button');
@@ -36,8 +40,8 @@ export default function makeDomTodoItem(todoItem) {
         deleteTodoItem(todoItem);
         updateProjectsContainer();
     });
-    domTodoItem.appendChild(deleteTodoItemButton);
+    domExpandedTodoItem.appendChild(deleteTodoItemButton);
 
-    return domTodoItem;
+    return domExpandedTodoItem;
 
 }

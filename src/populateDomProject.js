@@ -1,12 +1,23 @@
-import makeDomTodoItem from "./makeDomTodoItem";
+import makeDomTodoItem from "./makeExpandedDomTodoItem";
+import makeDomCondensedTodoItem from "./makeDomCondensedTodoItem";
 
 export default function populateDomProject(project, domProject) {
 
-    project.todoItems.forEach((todoItem) => {     
+    project.todoItems.forEach((todoItem) => {
 
-        const domTodoItem = makeDomTodoItem(todoItem);
+        if (!todoItem.details) {
 
-        domProject.appendChild(domTodoItem);
+            const domCondensedTodoItem = makeDomCondensedTodoItem(todoItem);
+            
+            domProject.appendChild(domCondensedTodoItem);
+
+        } else if (todoItem.details) {
+
+            const domTodoItem = makeDomTodoItem(todoItem);
+
+            domProject.appendChild(domTodoItem);
+
+        };
 
     });
 
