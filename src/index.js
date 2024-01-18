@@ -1,7 +1,7 @@
 import './style.css';
 import projectController from './projectController';
 import makeDomTemplate from './makeDomTemplate';
-import updateDom from './updateProjectsContainer';
+import updateProjectsContainer from './updateProjectsContainer';
 
 const listOfProjects = [];
 
@@ -9,7 +9,7 @@ const defaultProject = projectController('Default');
 
 makeDomTemplate();
 
-updateDom();
+updateProjectsContainer();
 
 export { listOfProjects, defaultProject };
 

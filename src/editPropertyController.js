@@ -1,17 +1,17 @@
-import updateDom from "./updateProjectsContainer";
 import editProperty from "./editProperty";
-import updateDomDialog from "./updateDomDialog";
+import getNewValue from "./getNewValue";
+
 
 export default function editPropertyController(todoItem, property) {
 
-    let newValue = prompt(`New ${property}:`);
+    let newValue = getNewValue(property);
 
     if (property === 'title') {
 
         while (newValue === '') {
 
             alert('Must have title.');
-            newValue = prompt(`New ${property}:`);
+            newValue = getNewValue(property);
 
         };
 
@@ -22,7 +22,7 @@ export default function editPropertyController(todoItem, property) {
         while (Number.isNaN(+newValue)) {
 
             alert('Enter number of hours.');
-            newValue = prompt(`New ${property}:`);
+            newValue = getNewValue(property);
             
         };
 

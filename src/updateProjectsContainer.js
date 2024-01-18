@@ -1,13 +1,17 @@
-import clearProjectsContainer from "./clearProjectsContainer";
-import displayProjectsContainer from "./displayProjectsContainer";
 import populateProjectsContainer from "./populateProjectsContainer";
+import { body, projectsContainer} from './makeDomTemplate';
 
 export default function updateProjectsContainer() {
 
-    clearProjectsContainer();
+    if (projectsContainer.innerHTML !== '') {
+        
+        projectsContainer.innerHTML = '';
+        body.removeChild(projectsContainer); 
+
+    };
 
     populateProjectsContainer();
 
-    displayProjectsContainer();
+    body.appendChild(projectsContainer);
 
 }
