@@ -1,11 +1,11 @@
-import addProjectToListOfProjects from "./addProjectToListOfProjects";
 import makeProject from "./makeProject";
+import { listOfProjects } from "./index";
 
 export default function projectController(projectTitle) {
 
     const project = makeProject(projectTitle);
 
-    addProjectToListOfProjects(project);
+    listOfProjects.push(project);
 
     return project;
 

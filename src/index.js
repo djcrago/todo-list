@@ -1,7 +1,7 @@
 import './style.css';
 import projectController from './projectController';
 import makeDomTemplate from './makeDomTemplate';
-import domController from './domController';
+import updateDom from './updateProjectsContainer';
 
 const listOfProjects = [];
 
@@ -9,14 +9,12 @@ const defaultProject = projectController('Default');
 
 makeDomTemplate();
 
-domController();
+updateDom();
 
 export { listOfProjects, defaultProject };
 
 // User-interface
-    // View all projects
-    // View all todos in each project (probably just the title and duedate)
-    // Expand a single todo to see/edit its details
+    // Expand a single todo to edit its details
 
 // External libraries
     // date-fns

@@ -1,5 +1,5 @@
-import domController from "./domController";
 import editPropertyController from "./editPropertyController";
+import updateDom from "./updateProjectsContainer";
 
 export default function makeDomEditButton(todoItem, property) {
 
@@ -8,7 +8,7 @@ export default function makeDomEditButton(todoItem, property) {
     editButton.textContent = 'Edit';
     editButton.addEventListener('click', () => {
         editPropertyController(todoItem, property);
-        domController();
+        updateDom();
     });
 
     return editButton;

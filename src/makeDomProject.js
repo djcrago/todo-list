@@ -1,4 +1,4 @@
-import domController from "./domController";
+import updateDom from "./updateProjectsContainer";
 import todoItemController from "./todoItemController";
 import deleteProject from './deleteProject';
 
@@ -12,26 +12,25 @@ export default function makeDomProject(project) {
     title.textContent = project.title;
     domProject.appendChild(title);
 
-    const addTodoItem = document.createElement('button');
-    addTodoItem.classList.toggle('add-todo-item');
-    addTodoItem.textContent = 'New Todo Item';
-    addTodoItem.addEventListener('click', () => {
+    const addTodoItemButton = document.createElement('button');
+    addTodoItemButton.classList.toggle('add-todo-item');
+    addTodoItemButton.textContent = 'New Todo Item';
+    addTodoItemButton.addEventListener('click', () => {
         todoItemController(project);
-        domController();
+        updateDom();
     });
-    domProject.appendChild(addTodoItem);
+    domProject.appendChild(addTodoItemButton);
 
     const deleteProjectButton = document.createElement('button');
     deleteProjectButton.classList.toggle('delete-project');
     deleteProjectButton.textContent = 'Delete Project';
     deleteProjectButton.addEventListener('click', () => {
         deleteProject(project);
-        domController();
+        updateDom();
     });
-    if (project.title !== 'Default') {
+    if (project.title !== 'Default') { // this logic being here is questionable
         domProject.appendChild(deleteProjectButton);
     }
-
 
     return domProject;
 

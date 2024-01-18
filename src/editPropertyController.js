@@ -1,5 +1,6 @@
-import domController from "./domController";
+import updateDom from "./updateProjectsContainer";
 import editProperty from "./editProperty";
+import updateDomDialog from "./updateDomDialog";
 
 export default function editPropertyController(todoItem, property) {
 

@@ -1,5 +1,5 @@
 import deleteTodoItem from './deleteTodoItem';
-import domController from './domController';
+import updateDom from './updateProjectsContainer';
 import makeDomEditButton from './makeDomEditButton';
 
 export default function makeDomTodoItem(todoItem) {
@@ -52,7 +52,7 @@ export default function makeDomTodoItem(todoItem) {
     deleteTodoItemButton.textContent = 'Delete Todo Item';
     deleteTodoItemButton.addEventListener('click', () => {
         deleteTodoItem(todoItem);
-        domController();
+        updateDom();
     });
     domTodoItem.appendChild(deleteTodoItemButton);
 

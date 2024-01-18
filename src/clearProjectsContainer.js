@@ -1,6 +1,6 @@
 import { body, projectsContainer } from './makeDomTemplate';
 
-export default function clearDomDisplay() {
+export default function clearProjectsContainer() {
 
     if (projectsContainer.innerHTML !== '') {
         
