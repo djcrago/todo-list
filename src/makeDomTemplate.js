@@ -18,9 +18,12 @@ export default function makeDomTemplate() {
     addProjectButton.textContent = '+ New Project';
     addProjectButton.addEventListener('click', () => {
         projectController();
-        updateProjectsContainer(); 
+        updateProjectsContainer();
     });
     body.appendChild(addProjectButton);
+
+    // const defaultProject = projectController('Default');
+    
 
 }
 

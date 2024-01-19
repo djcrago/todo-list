@@ -10,6 +10,12 @@ export default function makeProject(projectTitle) {
         title = getProjectTitle();
     };
 
+    console.log(title);
+
+    if (title === null) {
+        return;
+    };
+
     return {
         title,
         todoItems: [],

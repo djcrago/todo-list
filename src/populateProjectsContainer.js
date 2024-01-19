@@ -8,7 +8,7 @@ export default function populateProjectsContainer() {
     listOfProjects.forEach((project) => {
 
         const domProject = makeDomProject(project);
-
+        
         populateDomProject(project, domProject);
 
         projectsContainer.appendChild(domProject);

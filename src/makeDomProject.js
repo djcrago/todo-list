@@ -28,7 +28,7 @@ export default function makeDomProject(project) {
         deleteProject(project);
         updateProjectsContainer();
     });
-    if (project.title !== 'Default') { // this logic being here is questionable
+    if (project.title !== 'Default') {
         domProject.appendChild(deleteProjectButton);
     }
 
