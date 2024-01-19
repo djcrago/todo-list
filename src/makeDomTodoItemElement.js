@@ -27,7 +27,7 @@ export default function makeDomTodoItemElement(todoItem, property, elementType) 
     } else if (property === 'details') {
         element.textContent = 'Show / Hide Details';    
     } else if (property === 'delete') {
-        element.textContent = 'Delete Todo Item';
+        element.textContent = 'Remove Todo Item';
     } else {
         element.textContent = propertyValue;
     };

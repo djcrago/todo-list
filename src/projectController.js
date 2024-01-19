@@ -1,5 +1,5 @@
 import makeProject from "./makeProject";
-import { listOfProjects } from "./index";
+import listOfProjects from "./index";
 
 export default function projectController(projectTitle) {
 

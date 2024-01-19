@@ -1,4 +1,4 @@
-import { listOfProjects } from "./index";
+import listOfProjects from "./index";
 
 export default function deleteProject(project) {
 

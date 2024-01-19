@@ -22,9 +22,6 @@ export default function makeDomTemplate() {
     });
     body.appendChild(addProjectButton);
 
-    // const defaultProject = projectController('Default');
-    
-
 }
 
 export { body, projectsContainer };

@@ -1,7 +1,9 @@
 import './style.css';
 import initializeDom from './initializeDom';
 
-export const listOfProjects = [];
+const listOfProjects = [];
+
+export default listOfProjects;
 
 initializeDom();
 
