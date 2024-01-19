@@ -1,7 +1,7 @@
 import { listOfProjects } from "./index";
 import makeDomProject from "./makeDomProject";
-import { projectsContainer } from "./makeDomTemplate";
 import populateDomProject from "./populateDomProject";
+import { projectsContainer } from "./makeDomTemplate";
 
 export default function populateProjectsContainer() {
 

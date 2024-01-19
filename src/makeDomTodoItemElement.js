@@ -14,18 +14,20 @@ export default function makeDomTodoItemElement(todoItem, property, elementType) 
 
     if (property === 'dueDate') {
         element.textContent = `Due: ${propertyValue}`;
+    } else if (property === 'description') {
+        element.textContent = `Description: ${propertyValue}`;
     } else if (property === 'priority') {
         element.textContent = `Priority: ${propertyValue}`;
     } else if (property === 'timeEstimate') {
         if (propertyValue !== '') {
-            element.textContent = `Time Estimate: ${propertyValue} hours.`            
+            element.textContent = `Time Estimate: ${propertyValue} hours`            
         } else {
             element.textContent = 'Time Estimate:';
         };
+    } else if (property === 'details') {
+        element.textContent = 'Show / Hide Details';    
     } else if (property === 'delete') {
         element.textContent = 'Delete Todo Item';
-    } else if (property === 'details') {
-        element.textContent = 'Show/Hide Details';
     } else {
         element.textContent = propertyValue;
     };

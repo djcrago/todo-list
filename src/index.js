@@ -13,9 +13,6 @@ updateProjectsContainer();
 
 export { listOfProjects, defaultProject };
 
-// User-interface
-    // Expand a single todo to edit its details
-
 // External libraries
     // date-fns
 

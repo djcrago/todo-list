@@ -1,30 +1,24 @@
-import deleteTodoItem from './deleteTodoItem';
-import updateProjectsContainer from './updateProjectsContainer';
 import makeDomTodoItemElement from './makeDomTodoItemElement';
+import makeDomCondensedTodoItem from './makeDomCondensedTodoItem';
+import updateProjectsContainer from './updateProjectsContainer';
 
 export default function makeDomExpandedTodoItem(todoItem) {
 
-    const domExpandedTodoItem = document.createElement('div');
-    domExpandedTodoItem.classList.toggle('todo-item');
-
-    const title = makeDomTodoItemElement(todoItem, 'title',  'h3');
-    domExpandedTodoItem.appendChild(title);
+    const domExpandedTodoItem = makeDomCondensedTodoItem(todoItem);
+    const toggleDetailsButton = domExpandedTodoItem.querySelector('.details');
 
     const description = makeDomTodoItemElement(todoItem, 'description');
-    domExpandedTodoItem.appendChild(description);
-
-    const dueDate = makeDomTodoItemElement(todoItem, 'dueDate');
-    domExpandedTodoItem.appendChild(dueDate);
+    domExpandedTodoItem.insertBefore(description, toggleDetailsButton);
 
     const priority = makeDomTodoItemElement(todoItem, 'priority');
-    domExpandedTodoItem.appendChild(priority);
+    domExpandedTodoItem.insertBefore(priority, toggleDetailsButton);
 
     const timeEstimate = makeDomTodoItemElement(todoItem, 'timeEstimate');
-    domExpandedTodoItem.appendChild(timeEstimate);
+    domExpandedTodoItem.insertBefore(timeEstimate, toggleDetailsButton);
 
     const markCompleted = makeDomTodoItemElement(todoItem, 'markCompleted', 
                                                 'button');
-    domExpandedTodoItem.appendChild(markCompleted);
+    domExpandedTodoItem.insertBefore(markCompleted, toggleDetailsButton);
     markCompleted.addEventListener('click', () => {
         if (todoItem.markCompleted === 'Not Complete') {
             todoItem.markCompleted = 'Complete';
@@ -33,22 +27,6 @@ export default function makeDomExpandedTodoItem(todoItem) {
         };
         updateProjectsContainer();
     });
-
-    const toggleDetailsButton = makeDomTodoItemElement(todoItem, 'details',
-                                                       'button');
-    toggleDetailsButton.addEventListener('click', () => {
-        todoItem.details = !todoItem.details;
-        updateProjectsContainer();
-    });
-    domExpandedTodoItem.appendChild(toggleDetailsButton);
-
-    const deleteTodoItemButton = makeDomTodoItemElement(todoItem, 'delete',
-                                                        'button');
-    deleteTodoItemButton.addEventListener('click', () => {
-        deleteTodoItem(todoItem);
-        updateProjectsContainer();
-    });
-    domExpandedTodoItem.appendChild(deleteTodoItemButton);
 
     return domExpandedTodoItem;
 

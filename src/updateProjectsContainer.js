@@ -1,5 +1,5 @@
-import populateProjectsContainer from "./populateProjectsContainer";
 import { body, projectsContainer} from './makeDomTemplate';
+import populateProjectsContainer from "./populateProjectsContainer";
 
 export default function updateProjectsContainer() {
 

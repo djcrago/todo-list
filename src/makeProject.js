@@ -1,3 +1,5 @@
+import getProjectTitle from "./getProjectTitle";
+
 export default function makeProject(projectTitle) {
 
     let title;
@@ -5,7 +7,7 @@ export default function makeProject(projectTitle) {
     if (projectTitle) {
         title = projectTitle;
     } else {
-        title = prompt('Name of Project:', 'New Project');
+        title = getProjectTitle();
     };
 
     return {

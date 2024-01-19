@@ -9,22 +9,44 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    background-color: rgba(255, 166, 0, 0.05);
+    font-size: 1rem;
 }
 
 h1 {
     text-align: center;
-    font-size: 3rem;
-    border-bottom: 2px dashed black;
+    font-size: 4rem;
+    border-bottom: 2px dashed orange;
+    color: orange;
+}
+
+button {
+    background-color: rgba(255, 218, 117, 0.2);
+    color: rgb(16, 16, 16);
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(255, 205, 147, 0.636);
+}
+
+button:active {
+    background-color: rgba(255, 236, 215, 0.2);
 }
 
 .todo-item {
     display: flex;
     flex-direction: column;
     align-self: center;
-    gap: 8px;
-    border: 1px solid orange;
+    gap: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 218, 148, 0.227);
     min-width: 300px;
     padding: 16px;
+    font-size: 1.025rem;
 }
 
 .title {
@@ -57,12 +79,11 @@ h1 {
 .priority,
 .timeEstimate {
     display: flex;
-    gap: 8px;
 }
 
 .dom-project {
     border: 1px solid black;
-    padding: 16px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,12 +95,9 @@ h1 {
 
 .project-title {
     font-size: 1.6rem;
+    color: rgb(225, 147, 0);
     display: flex;
     flex-wrap: wrap;
-}
-
-.todo-items {
-
 }
 
 .add-project {
@@ -107,7 +125,7 @@ h1 {
 }
 
 .edit-property {
-    height: min-content;
+    width: 35px;
     padding: 2px;
     margin-left: auto;
 }
@@ -117,5 +135,5 @@ h1 {
 }
 
 .details {
-    
+
 }

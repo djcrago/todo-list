@@ -1,6 +1,8 @@
-import deleteTodoItem from "./deleteTodoItem";
-import updateProjectsContainer from "./updateProjectsContainer";
 import makeDomTodoItemElement from "./makeDomTodoItemElement";
+import updateProjectsContainer from "./updateProjectsContainer";
+import deleteTodoItem from "./deleteTodoItem";
+
+
 
 export default function makeDomCondensedTodoItem(todoItem) {
 
@@ -21,8 +23,8 @@ export default function makeDomCondensedTodoItem(todoItem) {
     });
     domCondensedTodoItem.appendChild(toggleDetailsButton);
 
-    const deleteTodoItemButton = makeDomTodoItemElement(todoItem, 'delete',
-                                                        'button');
+    const deleteTodoItemButton = makeDomTodoItemElement(todoItem, 'delete', 
+                                                    'button');
     deleteTodoItemButton.addEventListener('click', () => {
         deleteTodoItem(todoItem);
         updateProjectsContainer();

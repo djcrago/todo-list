@@ -15,7 +15,7 @@ export default function makeDomTemplate() {
  
     const addProjectButton = document.createElement('button');
     addProjectButton.classList.toggle('add-project');
-    addProjectButton.textContent = 'New Project';
+    addProjectButton.textContent = '+ New Project';
     addProjectButton.addEventListener('click', () => {
         projectController();
         updateProjectsContainer(); 
