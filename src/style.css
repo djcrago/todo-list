@@ -70,7 +70,8 @@ button:active {
 }
 
 .markCompleted {
-
+    height: 40px;
+    font-weight: bold;
 }
 
 .title,
