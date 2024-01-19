@@ -25,6 +25,14 @@ export default function makeDomExpandedTodoItem(todoItem) {
     const markCompleted = makeDomTodoItemElement(todoItem, 'markCompleted', 
                                                 'button');
     domExpandedTodoItem.appendChild(markCompleted);
+    markCompleted.addEventListener('click', () => {
+        if (todoItem.markCompleted === 'Not Complete') {
+            todoItem.markCompleted = 'Complete';
+        } else {
+            todoItem.markCompleted = 'Not Complete';
+        };
+        updateProjectsContainer();
+    });
 
     const toggleDetailsButton = makeDomTodoItemElement(todoItem, 'details',
                                                        'button');
