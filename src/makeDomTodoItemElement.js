@@ -10,7 +10,13 @@ export default function makeDomTodoItemElement(todoItem, property, elementType) 
     };
 
     const element = document.createElement(elementType);
-    element.classList.toggle(property);
+    element.classList.toggle('element');
+
+    if (property === 'markComplete') {
+
+        element.classList.toggle('markCompleted');
+
+    }
 
     if (property === 'dueDate') {
         element.textContent = `Due: ${propertyValue}`;

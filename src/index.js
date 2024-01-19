@@ -2,8 +2,6 @@ import './style.css';
 import initializeDom from './initializeDom';
 import populateListOfProjects from './populateListOfProjects';
 import projectController from './projectController';
-import makeDomCondensedTodoItem from './makeDomCondensedTodoItem';
-import todoItemController from './todoItemController';
 
 let listOfProjects = populateListOfProjects();
 
@@ -16,5 +14,3 @@ if (listOfProjects.length === 0) {
 }
 
 initializeDom();
-
-// localStorage
