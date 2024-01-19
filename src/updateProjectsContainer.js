@@ -1,5 +1,6 @@
 import { body, projectsContainer} from './makeDomTemplate';
 import populateProjectsContainer from "./populateProjectsContainer";
+import populateStorage from './populateStorage';
 
 export default function updateProjectsContainer() {
 
@@ -11,6 +12,8 @@ export default function updateProjectsContainer() {
     };
 
     populateProjectsContainer();
+
+    populateStorage();
 
     body.appendChild(projectsContainer);
 

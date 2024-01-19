@@ -1,6 +1,6 @@
 import getTodoItemPropertyController from "./getTodoItemPropertyController";
 
-export default function makeTodoItem(project) {
+export default function makeTodoItem() {
 
     const title = getTodoItemPropertyController('Title');
     const description = getTodoItemPropertyController('Description');
@@ -15,7 +15,6 @@ export default function makeTodoItem(project) {
         priority,
         timeEstimate,
         markCompleted: 'Not Complete',
-        project,
         details: false
     };
 
